@@ -1,0 +1,138 @@
+/* كود CSS السابق */
+
+.destination-card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* إضافة انتقال لـ box-shadow */
+  min-height: 350px;
+  position: relative;
+  overflow: hidden;
+  animation: fadeIn 0.5s ease-out forwards; /* إضافة animation عند التحميل */
+  opacity: 0; /* تهيئة العنصر ليكون مخفيًا في البداية */
+}
+
+.destination-card:hover {
+  transform: scale(1.07); /* زيادة نسبة التكبير عند الـ hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* إضافة ظل أكبر عند الـ hover */
+}
+
+.destination-card img {
+  object-fit: cover;
+  height: 350px;
+  transition: filter 0.3s ease-in-out; /* إضافة انتقال لـ filter */
+}
+
+.destination-card:hover img {
+  filter: brightness(80%); /* تقليل سطوع الصورة عند الـ hover */
+}
+
+.container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  color: #333;
+  font-weight: bold;
+}
+
+p {
+  color: #666;
+}
+
+.form-control::placeholder {
+  color: #999;
+}
+
+.input-group-text {
+  background-color: #fff;
+  border: none;
+}
+
+.pagination .page-link {
+  color: #007bff;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .col-md-3 {
+    margin-bottom: 15px;
+  }
+}
+
+.pagination .page-item {
+  margin: 0 5px;
+}
+
+.pagination .page-link {
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #007bff;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #fff;
+}
+
+.pagination .page-item.disabled .page-link {
+  color: #ccc;
+  background-color: #f8f9fa;
+  border-color: #f8f9fa;
+}
+
+.see-tours-btn {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  font-size: 0.8rem;
+  padding: 0.3rem 0.6rem;
+  background-color: rgba(0, 0, 0, 0.5); /* تغيير لون الخلفية */
+  border: 1px solid white;
+  color: white;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  opacity: 0; /* تهيئة العنصر ليكون مخفيًا في البداية */
+}
+.nav-link.dropdown-toggle {
+  margin-bottom: 0.5px;
+}
+.dropdown-menu {
+  margin-top: 0.5px;
+}
+
+.destination-card:hover .see-tours-btn {
+  display: block;
+  opacity: 1; /* إظهار الزر عند الـ hover */
+}
+
+.see-tours-btn:hover {
+  background-color: #003399;
+  border-color: #003399;
+  color: white;
+}
+
+/* Keyframes Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

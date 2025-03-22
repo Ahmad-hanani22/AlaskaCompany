@@ -1,0 +1,172 @@
+/* تعديل الكود السابق */
+
+.product-card {
+  border: 1px solid #eee;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #f8f9fa;
+  text-align: center;
+  /* Center image */
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  /* Add smooth transitions */
+  animation: complexEntrance 0.7s ease-out forwards; /* تعديل اسم الـ animation */
+  opacity: 0; /* تهيئة العنصر ليكون مخفيًا في البداية */
+  transform: translateY(30px) rotate(-5deg); /* تعديل الـ transform الأولي */
+  background-color: #fff; /* تهيئة لون الخلفية */
+}
+
+.product-card:hover {
+  transform: scale(1.03);
+  /* Slightly scale up on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Add a subtle shadow on hover */
+}
+
+.product-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.pagination {
+  margin-top: 30px;
+  /* Add space above the pagination */
+}
+
+.pagination .page-link {
+  cursor: pointer;
+  border-radius: 0.25rem;
+  /* Rounded corners */
+  padding: 0.5rem 0.75rem;
+  /* adjust padding for size  */
+  margin: 0 2px;
+  /* Space between each button  */
+  border: 1px solid #dee2e6;
+  /* default border color  */
+  color: #0d6efd;
+  /* default text color  */
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  /* Add transition for hover effect */
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #0d6efd;
+  /* Active button color  */
+  border-color: #0d6efd;
+  /* Active button border  */
+  color: #fff;
+  /* Active button text color  */
+}
+
+.pagination .page-link:hover {
+  background-color: #e9ecef;
+  /* Hovered button color  */
+  color: #000;
+  /* Adjust the hover text color */
+}
+
+/* Styles for smaller product cards */
+.small-product {
+  font-size: 0.9em;
+  /* Smaller font size for the whole card */
+}
+
+.small-img {
+  max-width: 70%;
+  height: auto;
+}
+
+.small-title {
+  font-size: 1.1em;
+  margin-top: 5px;
+  /* Reduced margin */
+}
+
+.small-price {
+  font-size: 1em;
+}
+
+.section-spacing {
+  margin-bottom: 30px;
+}
+
+/* Keyframes Animation */
+@keyframes complexEntrance {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) rotate(-5deg);
+    background-color: #fff;
+  }
+  50% {
+    opacity: 0.7;
+    transform: translateY(-5px) rotate(2deg); /* حركة صعودية طفيفة ودوران معاكس */
+    background-color: #f0f0f0; /* لون خلفية انتقالي */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotate(0);
+    background-color: #f8f9fa; /* لون الخلفية الأصلي */
+  }
+}
+
+h1 {
+  animation: titleEntrance 0.8s ease-out forwards; /* إضافة الـ animation */
+  opacity: 0; /* تهيئة العنصر ليكون مخفيًا في البداية */
+  transform: translateY(-50px) scale(0.8); /* تعديل الـ transform الأولي */
+  color: #333; /* لون النص */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* ظل للنص */
+}
+
+/* Keyframes Animation */
+@keyframes titleEntrance {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px) scale(0.8);
+  }
+  60% {
+    opacity: 0.8;
+    transform: translateY(10px) scale(1.1); /* حركة نزول طفيفة وتكبير */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+/* إضافة هذا الكود إلى ملف الـ CSS الخاص بك */
+
+.pagination .page-item {
+  animation: paginationEntrance 0.6s ease-out forwards; /* إضافة الـ animation */
+  opacity: 0; /* تهيئة العنصر ليكون مخفيًا في البداية */
+  transform: translateY(20px); /* تهيئة العنصر ليكون أسفل مكانه الأصلي */
+}
+
+/* تأخير الـ animation لكل زر ترقيم */
+.pagination .page-item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.pagination .page-item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.pagination .page-item:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.pagination .page-item:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.pagination .page-item:nth-child(5) {
+  animation-delay: 0.5s;
+}
+/* يمكنك إضافة المزيد من التأخيرات حسب عدد الأزرار */
+
+/* Keyframes Animation */
+@keyframes paginationEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
